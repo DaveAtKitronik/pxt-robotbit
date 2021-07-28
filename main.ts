@@ -203,19 +203,7 @@ namespace robotbit {
     }
 
 
-    /**
-     * Init RGB pixels mounted on robotbit
-     */
-    //% blockId="robotbit_rgb" block="RGB"
-    //% weight=5
-    export function rgb(): neopixel.Strip {
-        if (!neoStrip) {
-            neoStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
-        }
-
-        return neoStrip;
-    }
-
+  
     /**
      * Servo Execute
      * @param index Servo Channel; eg: S1
@@ -466,20 +454,7 @@ namespace robotbit {
         matrixShow();
     }
 
-	/*
-    //% blockId=robotbit_matrix_clean block="Matrix Clean|X %x|Y %y"
-    //% weight=68
-    export function MatrixClean(x: number, y: number): void {
-        if (!initializedMatrix) {
-            matrixInit();
-            initializedMatrix = true;
-        }
-        let idx = y * 2 + x / 8;
-		// todo: bitwise not throw err 
-        matBuf[idx + 1] &=~(1 << (x % 8));
-        matrixShow();
-    }
-	*/
+
 
     //% blockId=robotbit_matrix_clear block="Matrix Clear"
     //% weight=65
